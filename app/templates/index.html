@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <form action="/index" method="POST">
+            <p>Enter Two Numbers:</p>
+            <input type="text" name='num1' value={{ n[0] }} />
+            <input type="text" name='num2' value={{ n[1] }} />
+            {% for n in ['Add', 'Subtract', 'Divide', 'Multiply'] %}
+            <input type="submit" name={{ n }} value={{ n }} />
+            {% endfor %}
+        </form>
+        {% if result %}
+        <p style="font-weight: bold;">{{ result }}</p>
+        {% else %}
+        {% endif %}
+        {% if error %}
+        <p style="color:red; font-weight: bold">{{ error }}</p>
+        {% else %}
+        {% endif %}
+    </body>
+</html>
