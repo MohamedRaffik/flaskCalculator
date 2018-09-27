@@ -1,24 +1,21 @@
 <html>
     <head>
         <title>Calculator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
     </head>
     <body>
         <h1>Calculator</h1>
-        <form action="/index" method="POST">
+        <form>
             <p>Enter Two Numbers:</p>
             <input type="text" name='num1' value={{ n[0] }} />
             <input type="text" name='num2' value={{ n[1] }} />
-            {% for n in ['Add', 'Subtract', 'Divide', 'Multiply'] %}
-            <input type="submit" name={{ n }} value={{ n }} />
-            {% endfor %}
         </form>
-        {% if result %}
-        <p style="font-weight: bold;">{{ result }}</p>
-        {% else %}
-        {% endif %}
-        {% if error %}
-        <p style="color:red; font-weight: bold">{{ error }}</p>
-        {% else %}
-        {% endif %}
+        {% for n in ['Add', 'Subtract', 'Divide', 'Multiply'] %}
+        <button id={{ n }}>{{ n }}</button>
+        {% endfor %}
+        <p id="result" style="font-weight: bold;"></p>
+        <p id="error" style="color:red; font-weight: bold"></p>
+        <script src="/static/ajax.js"></script>
     </body>
 </html>
