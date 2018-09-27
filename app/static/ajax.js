@@ -46,7 +46,8 @@ $(function() {
                     $('#result').html('');
                 }
                 else {
-                    $('#result').html(d['n1'] + " / " + d['n2'] + " = " + d['result']);                    $('#error').html('');
+                    $('#result').html(d['n1'] + " / " + d['n2'] + " = " + d['result']);
+                    $('#error').html('');
                 }
             }
         });
@@ -63,7 +64,8 @@ $(function() {
                     $('#result').html('');
                 }
                 else {
-                    $('#result').html(d['n1'] + " * " + d['n2'] + " = " + d['result']);                    $('#error').html('');
+                    $('#result').html(d['n1'] + " * " + d['n2'] + " = " + d['result']);
+                    $('#error').html('');
                 }
             }
         });
